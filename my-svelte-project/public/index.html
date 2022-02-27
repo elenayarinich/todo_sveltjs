@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset='utf-8'>
+	<meta name='viewport' content='width=device-width,initial-scale=1'>
+
+	<title>todo list</title>
+    <link rel='icon' type='image/png' href='/favicon.png'>
+	<link rel='stylesheet' href='/global.css'>
+	<link rel='stylesheet' href='/build/bundle.css'>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        body {
+            margin: 0;
+            min-width: 250px;
+            font-family: 'Prata', serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul li {
+            cursor: pointer;
+            position: relative;
+            padding: 12px 8px 12px 50px;
+            list-style-type: none;
+            background: #fff;
+            font-size: 18px;
+            transition: 0.2s;
+            margin-bottom: 16px;
+            border-radius: 12px;
+            border: 1px solid #CBCACA;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            overflow: hidden;
+        }
+
+        ul li:hover {
+            background: #fff;
+        }
+
+        ul li::before {
+            content: '';
+            position: absolute;
+            border: 2px #888 solid;
+            top: 50%;
+            transform: translateY(-50%);
+            border-radius: 50%;
+            left: 16px;
+            width: 20px;
+            height: 20px;
+            transition: 0.4s;
+        }
+
+        ul li.checked {
+            background-color: #fff;
+            color: rgb(100, 100, 100);
+            opacity: 0.5;
+            text-decoration: line-through;
+        }
+
+        ul li.checked::before {
+            background-color: #6792AA;
+            border-color: #6792AA;
+
+        }
+
+        .close {
+            position: absolute;
+            right: 0;
+            top: 0;
+            padding: 12px 16px 12px 16px;
+        }
+
+        .close:hover {
+            background-color: #DBD5D0;
+            color: white;
+        }
+
+        .header {
+            color: white;
+            text-align: center;
+            position: relative;
+            padding-bottom: 40px;
+        }
+
+        .header:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, rgba(219, 213, 208, 0.76) -24.44%, rgba(195, 185, 175, 0.532) -19.28%, rgba(195, 185, 175, 0.532) -8.94%, rgba(195, 185, 175, 0.532) 8.3%, rgba(195, 185, 175, 0.532) 19.78%, rgba(205, 196, 186, 0.532) 44.49%, rgba(211, 200, 189, 0.532) 72.64%, rgba(216, 204, 193, 0.532) 77.23%);
+            filter: blur(20px);
+            z-index: -1;
+        }
+
+        input {
+            border: none;
+            border-radius: 0;
+            width: 100%;
+            padding: 20px 40px;
+            padding-right: 60px;
+            font-size: 26px;
+            border-radius: 12px;
+            color: #A1A1A1;
+            border: 1px solid #CBCACA;
+        }
+
+        .add {
+            position: relative;
+        }
+
+        .add-button {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            font-size: 30px;
+            transform: translateY(-50%);
+            color: #6792AA;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+
+        .add-button:hover {
+            transform: translateY(-50%) scale(1.1);
+            color: burlywood;
+        }
+    </style>
+	
+	<script defer src='/build/bundle.js'></script>
+</head>
+
+<body>
+</body>
+</html>
